@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:text="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+        <!--读入外部配置文件-->
+    <text:property-placeholder location="classpath:jdbcTemplate.properties"/>
+    <bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="mydataSource">
+        <property name="jdbcUrl" value="${JDBC_url}"/>
+        <property name="driverClass" value="${JDBC_driver}"/>
+        <property name="user" value="${JDBC_user}"/>
+        <property name="password" value="${JDBC_password}"/>
+    </bean>
+<!--    创建template-->
+    <bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbcTemplate">
+        <property name="dataSource" ref="mydataSource"/>  <!--关联之前创建的连接池-->
+    </bean>
+</beans>
