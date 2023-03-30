@@ -17,11 +17,11 @@
         <property name="dataSource" ref="dataSources"/>
     </bean>
     <context:component-scan base-package="Tx"/>
-<!--配置事务管理器-->
+    <!--4.配置事务管理器-->
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactional">
         <property name="dataSource" ref="dataSources"/> <!--引用之前的连接池-->
     </bean>
 
-<!--开启基于注解的事务-->
+    <!--5.开启基于注解的事务-->
     <tx:annotation-driven transaction-manager="transactional"/>
 </beans>

@@ -1,25 +1,25 @@
 package domain;
 
-public class Person {
-    private int personId;
+public class Monster {
+    private int id;
     private String name;
     private String skill;
 
-    public Person() {
+    public Monster() {
     }
 
-    public Person(int personId, String name, String skill) {
-        this.personId = personId;
+    public Monster(int personId, String name, String skill) {
+        this.id = personId;
         this.name = name;
         this.skill = skill;
     }
 
     public int getPersonId() {
-        return personId;
+        return id;
     }
 
-    public void setPersonId(int personId) {
-        this.personId = personId;
+    public void setId(int personId) {
+        this.id = personId;
     }
 
     public String getName() {
@@ -40,8 +40,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "personId=" + personId +
+        return "Monster{" +
+                "Id=" + id +
                 ", name='" + name + '\'' +
                 ", skill='" + skill + '\'' +
                 '}';
