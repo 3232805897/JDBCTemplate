@@ -16,6 +16,9 @@
         <fileset id="fileset4" name="Affairs" removed="false">
           <file>file://$MODULE_DIR$/src/affairs.xml</file>
         </fileset>
+        <fileset id="fileset5" name="Taobao" removed="false">
+          <file>file://$MODULE_DIR$/src/taobao.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -29,5 +32,6 @@
     <orderEntry type="library" name="c3p0-0.9.1.2" level="project" />
     <orderEntry type="library" name="c3p0-0.9.1.2 (2)" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.20" level="project" />
+    <orderEntry type="library" name="com.springsource.org.aspectj.weaver-1.6.8.RELEASE" level="project" />
   </component>
 </module>
